@@ -142,6 +142,12 @@ button[type='submit'] {
   cursor: pointer;
 }
 
+button[type='submit']:disabled {
+  background-color: var(--background-gray);
+  color: var(--button-color);
+  cursor: not-allowed;
+}
+
 a {
   color: var(--button-color);
   text-decoration: none;

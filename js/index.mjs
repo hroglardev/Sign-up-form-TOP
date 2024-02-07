@@ -17,18 +17,22 @@ const phoneError = document.querySelector('.phone-error')
 const passwordError = document.querySelector('.password-error')
 
 const inputs = Array.from(document.querySelectorAll('input'))
-const errors = Array.from(document.querySelectorAll('.error-message'))
 
-const addEvent = (element, error, callback, confirmPasswordOptional = null) => {
-  element.addEventListener('input', (_event) => {
-    error.innerText = callback()
+const isFormValid = () => {
+  return inputs.every((inputElement) => !inputElement.classList.contains('red-border') && inputElement.value !== '')
+}
+
+const addEvent = (input, error, validationFunction, confirmPasswordOptional = null) => {
+  input.addEventListener('input', (event) => {
+    error.innerText = validationFunction()
+
     if (error.innerText !== '') {
-      element.classList.add('red-border')
+      input.classList.add('red-border')
       if (confirmPasswordOptional) {
         confirmPasswordOptional.classList.add('red-border')
       }
     } else {
-      element.classList.remove('red-border')
+      input.classList.remove('red-border')
       if (confirmPasswordOptional) {
         password.classList.remove('red-border')
         confirmPasswordOptional.classList.remove('red-border')
@@ -46,22 +50,15 @@ addEvent(confirm, passwordError, () => validatePasswords(password.value, confirm
 
 form.addEventListener('submit', (event) => {
   event.preventDefault()
-
-  let hasErrors = false
-
-  errors.forEach((error) => {
-    if (error.innerText !== '') {
-      hasErrors = true
-    }
+  inputs.forEach((input) => {
+    input.value = ''
   })
+  submit.setAttribute('disabled', true)
+})
 
-  if (hasErrors) {
-    submit.setAttribute('disabled', true)
-  } else {
+form.addEventListener('input', (_event) => {
+  let isValid = isFormValid()
+  if (isValid) {
     submit.removeAttribute('disabled')
-
-    inputs.forEach((input) => {
-      input.value = ''
-    })
   }
 })

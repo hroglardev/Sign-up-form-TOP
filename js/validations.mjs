@@ -4,6 +4,9 @@ export const validateNameAndSurname = (nameOrSurname) => {
   if (nameOrSurname[0] !== nameOrSurname[0].toUpperCase()) {
     return 'You must use an initial capital letter'
   }
+  if (nameOrSurname.slice(1) !== nameOrSurname.slice(1).toLowerCase()) {
+    return 'The name must be in lower case except for the first character'
+  }
   return ''
 }
 
