@@ -7,5 +7,61 @@
     <script src="./js/index.js" defer></script>
     <title>Sign up form</title>
   </head>
-  <body></body>
+  <body>
+    <section class="background">
+      <aside>
+        <div class="black-filter">
+          <img class="odin-logo" src="./images/odin-lined.png" alt="Image logo of The odin project" />
+          <p>ODIN</p>
+        </div>
+      </aside>
+    </section>
+    <section class="main-section">
+      <header>
+        <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <span class="italic">now</span> to get started.</p>
+        <p>You <span class="italic">know </span>you want to.</p>
+      </header>
+      <main class="form-section">
+        <form action="">
+          <legend>Let's do this!</legend>
+          <fieldset>
+            <div class="input-container">
+              <label for="">FIRST NAME</label>
+              <input type="text" />
+            </div>
+            <div class="input-container">
+              <label for="">LAST NAME</label>
+              <input type="text" />
+            </div>
+          </fieldset>
+          <fieldset>
+            <div class="input-container">
+              <label for="">EMAIL</label>
+              <input type="email" />
+            </div>
+            <div class="input-container">
+              <label for="">PHONE NUMBER</label>
+              <input type="text" />
+            </div>
+          </fieldset>
+          <fieldset>
+            <div class="input-container">
+              <label for="">PASSWORD</label>
+              <input type="password" class="error" />
+              <p class="error-message"></p>
+            </div>
+            <div class="input-container">
+              <label for="">CONFIRM PASSWORD</label>
+              <input type="password" class="error" />
+              <p class="error-message"></p>
+            </div>
+          </fieldset>
+          <div class="submit-container">
+            <button type="submit">Create Account</button>
+            <p>Already have an account? <a href=""> Log in</a></p>
+          </div>
+        </form>
+      </main>
+    </section>
+  </body>
 </html>
