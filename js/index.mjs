@@ -1,5 +1,5 @@
 'use strict'
-import { EMAIL, PHONE, PASSWORD } from './regex.mjs'
+import { EMAIL, PHONE } from './regex.mjs'
 import { validateEmailOrPhone, validateNameAndSurname, validatePasswords } from './validations.mjs'
 
 const name = document.querySelector('#first-name')
