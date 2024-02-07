@@ -152,3 +152,8 @@ a {
   color: red;
   font-size: 0.7rem;
 }
+
+.red-border,
+.red-border:focus {
+  outline: 1px solid red;
+}

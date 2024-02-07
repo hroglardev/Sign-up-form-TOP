@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/styles.css" />
-    <script src="./js/index.js" defer></script>
+    <script type="module" src="./js/index.mjs" defer></script>
     <title>Sign up form</title>
   </head>
   <body>
@@ -22,42 +22,46 @@
         <p>You <span class="italic">know </span>you want to.</p>
       </header>
       <main class="form-section">
-        <form action="">
+        <form action="" method="post" novalidate id="form">
           <legend>Let's do this!</legend>
           <fieldset>
             <div class="input-container">
-              <label for="">FIRST NAME</label>
-              <input type="text" />
+              <label for="first-name">FIRST NAME</label>
+              <input placeholder="Lucas" type="text" id="first-name" name="first-name" />
+              <p class="error-message name-error"></p>
             </div>
             <div class="input-container">
-              <label for="">LAST NAME</label>
-              <input type="text" />
-            </div>
-          </fieldset>
-          <fieldset>
-            <div class="input-container">
-              <label for="">EMAIL</label>
-              <input type="email" />
-            </div>
-            <div class="input-container">
-              <label for="">PHONE NUMBER</label>
-              <input type="text" />
+              <label for="last-name">LAST NAME</label>
+              <input placeholder="Cubile" type="text" id="last-name" name="last-name" />
+              <p class="error-message lastName-error"></p>
             </div>
           </fieldset>
           <fieldset>
             <div class="input-container">
-              <label for="">PASSWORD</label>
-              <input type="password" class="error" />
-              <p class="error-message"></p>
+              <label for="email">EMAIL</label>
+              <input placeholder="lucas@yahoo.com" type="email" id="email" name="email" />
+              <p class="error-message email-error"></p>
             </div>
             <div class="input-container">
-              <label for="">CONFIRM PASSWORD</label>
-              <input type="password" class="error" />
-              <p class="error-message"></p>
+              <label for="phone">PHONE NUMBER</label>
+              <input placeholder="+123456789" type="text" id="phone" name="phone" />
+              <p class="error-message phone-error"></p>
+            </div>
+          </fieldset>
+          <fieldset>
+            <div class="input-container">
+              <label for="password">PASSWORD</label>
+              <input placeholder="*******" type="password" class="error" id="password" name="password" />
+              <p class="error-message password-error"></p>
+            </div>
+            <div class="input-container">
+              <label for="confirm">CONFIRM PASSWORD</label>
+              <input placeholder="*******" type="password" class="error" id="confirm" name="confirm" />
+              <p class="error-message confirm-error"></p>
             </div>
           </fieldset>
           <div class="submit-container">
-            <button type="submit">Create Account</button>
+            <button type="submit" id="submit">Create Account</button>
             <p>Already have an account? <a href=""> Log in</a></p>
           </div>
         </form>
