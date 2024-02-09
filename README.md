@@ -18,6 +18,10 @@ In this project I split the code in different files to organise it better as wel
   <li>Validation of form inputs.</li>
 </ul>
 
+# Want to see it in action?
+
+<a href="https://hroglardev.github.io/Sign-up-form-TOP/" target="_blank">Click here</a>
+
 # Explanation of the code
 
 <img src="./docs-images/1.JPG" alt="">
@@ -88,10 +92,6 @@ Then it resets all the inputs' value to empty and resets the property of the sub
 
 Finally it adds another event on the form to remove the disabled attribute of the submit button once every input has a value that fulfills the conditions in the validator functions.
 
-# Want to see it in action?
-
-<a href="https://hroglardev.github.io/Sign-up-form-TOP/">Click here</a>
-
 # Want to track my progress?
 
 Checkout my other projects in order to see my evolution:
@@ -99,9 +99,11 @@ Checkout my other projects in order to see my evolution:
 <ol>
   <li><a href="https://github.com/hroglardev/odin-recipes" target="_blank">Recipes</a></li>
   <li><a href="https://github.com/hroglardev/Odin-landing-page" target="_blank">Landing Page</a></li>
-  <li><a href="https://github.com/hroglardev/Rock-Paper-Scissors-TOP-Console" target="_blank">Console Rock, Paper, Scissors</a></li>
+  <li><a href="https://github.com/hroglardev/Rock-Paper-Scissors-TOP-Console" target="_blank">You are here</a></li>
   <li><a href="https://github.com/hroglardev/Rock-Paper-Scissors-TOP" target="_blank">Rock, Paper, Scissors</a></li>
   <li><a href="https://github.com/hroglardev/Etch-a-Sketch" target="_blank">Etch a Sketch</a></li>
   <li><a href="https://github.com/hroglardev/Calculator" target="_blank">Calculator</a></li>
   <li><a href="https://github.com/hroglardev/Sign-up-form-TOP" target="_blank">You are here</a></li>
+  <li><a href="https://github.com/hroglardev/Dashboard" target="_blank">Dashboard</a></li>
+  <li><a href="https://github.com/hroglardev/Library" target="_blank">Library</a></li>
 </ol>
